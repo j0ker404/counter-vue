@@ -1,15 +1,26 @@
 <template>
-  <button class="round-button">
+  <button class="round-button" v-on:click="btnEmitter">
     {{ title }}
-    <!-- <span>
-    </span> -->
   </button>
 </template>
 
 <script>
 export default {
   name: "CounterButton",
+  // [title] is displayed on btn
   props: ["title"],
+  emits: ["click"],
+
+  methods: {
+    btnEmitter(event) {
+      // button event trigger function
+      this.$emit("click", this.title);
+      // console.log(event);
+      if (event) {
+        event.preventDefault();
+      }
+    }
+  }
 };
 </script>
 
