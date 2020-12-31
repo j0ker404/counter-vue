@@ -14,9 +14,11 @@ export default {
   },
   methods: {
     increment() {
+      // increment count value
       this.count++;
     },
-    decremenr() {
+    decrement() {
+      // increment count value
       this.count--;
     }
   }
