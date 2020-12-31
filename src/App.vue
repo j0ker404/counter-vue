@@ -1,13 +1,9 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-  <CounterDisplay />
-  <!-- <div class="btn-row">
-  </div> -->
+  <CounterDisplay ref="countDisp"/>
 
   <Row>
-    <CounterButton title="+" />
-    <CounterButton title="-" />
+    <CounterButton  @click="countBtnHandler" title="+" />
+    <CounterButton  @click="countBtnHandler" title="-" />
   </Row>
 </template>
 
@@ -22,6 +18,21 @@ export default {
     CounterDisplay,
     CounterButton,
     Row,
+  },
+  methods: {
+    countBtnHandler(emitValue) {
+      // call displayCounter
+      // increment/decrement method
+      // based on emitValue
+      
+      if (emitValue === "+") {
+        // console.log(emitValue);
+        this.$refs.countDisp.increment()
+      } else if (emitValue === "-") {
+        // console.log(emitValue);
+        this.$refs.countDisp.decrement()
+      }
+    },
   },
 };
 </script>
