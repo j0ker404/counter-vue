@@ -19,8 +19,8 @@ export default {
       if (event) {
         event.preventDefault();
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -43,5 +43,24 @@ https://stackoverflow.com/questions/37373734/fully-circular-buttons-with-dynamic
   align-items: center;
 
   font: 2em sans-serif;
+
+  /* 
+    https://codepen.io/seme332/pen/reJOwo  
+  */
+  background-color: #fff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  /*
+    animation effect
+    see hover for transform
+   */
+  transition: all 0.3s ease 0s;
+}
+
+.round-button:hover {
+  /* background-color: #2ee59d; */
+  /* color: #fff; */
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-7px);
 }
 </style>
