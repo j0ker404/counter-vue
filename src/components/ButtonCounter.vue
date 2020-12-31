@@ -1,8 +1,8 @@
 <template>
   <button class="round-button">
-    <h1>
-      {{ title }}
-    </h1>
+    {{ title }}
+    <!-- <span>
+    </span> -->
   </button>
 </template>
 
@@ -18,6 +18,7 @@ export default {
 https://stackoverflow.com/questions/37373734/fully-circular-buttons-with-dynamic-size
  */
 .round-button {
+  /* make circular */
   height: 2em;
   width: 2em;
   border-radius: 50%;
@@ -25,15 +26,11 @@ https://stackoverflow.com/questions/37373734/fully-circular-buttons-with-dynamic
   background-color: aqua;
   margin: 1em;
 
+  /* center text */
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
-}
 
-.round-button > span {
-  /* display: inline-block;
-  vertical-align: middle; */
-  max-width: 90%;
+  font: 2em sans-serif;
 }
 </style>
