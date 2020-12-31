@@ -25,4 +25,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ## TODO
-- [ ] make UI prettier
+- [x] make UI prettier (can still be improved)
